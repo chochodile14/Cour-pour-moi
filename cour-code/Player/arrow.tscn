@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cgrwca83f46d3"]
+
+[ext_resource type="Script" uid="uid://mqn8xjwebori" path="res://Script/arrow.gd" id="1_42itw"]
+[ext_resource type="Texture2D" uid="uid://bqxnpbk5hsahv" path="res://Asset/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Black Units/Archer/Arrow.png" id="2_m6voq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
+atlas = ExtResource("2_m6voq")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 37.0
+
+[node name="Arrow" type="Node2D" unique_id=1680977417]
+script = ExtResource("1_42itw")
+dammage = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=245254051]
+texture_filter = 1
+texture = SubResource("AtlasTexture_g4v7s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1672005796]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1276089979]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

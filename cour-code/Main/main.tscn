@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bjovx0xh57njh" path="res://Main/map.tscn" id="1_2w1kt"]
 [ext_resource type="PackedScene" uid="uid://cn7od0st5k048" path="res://Player/main_character.tscn" id="2_qvhan"]
+[ext_resource type="PackedScene" uid="uid://bt2y6k1oififp" path="res://Monster/first_monster.tscn" id="3_eunhr"]
+[ext_resource type="PackedScene" uid="uid://cgrwca83f46d3" path="res://Player/arrow.tscn" id="4_k3v36"]
 
 [node name="Main" type="Node2D" unique_id=109263121]
 
@@ -10,3 +12,12 @@
 [node name="MainCharacter" parent="." unique_id=429431583 instance=ExtResource("2_qvhan")]
 position = Vector2(-451, 231)
 scale = Vector2(0.37, 0.37)
+
+[node name="FirstMonster" parent="." unique_id=1530441871 instance=ExtResource("3_eunhr")]
+
+[node name="FirstMonster2" parent="." unique_id=796280672 instance=ExtResource("3_eunhr")]
+position = Vector2(507, -34)
+
+[node name="Arrow" parent="." unique_id=1680977417 instance=ExtResource("4_k3v36")]
+position = Vector2(-366, 261)
+scale = Vector2(0.5, 0.5)
