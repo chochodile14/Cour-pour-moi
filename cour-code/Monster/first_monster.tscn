@@ -220,10 +220,6 @@ radius = 33.0
 [node name="FirstMonster" type="RigidBody2D" unique_id=1530441871]
 gravity_scale = 0.0
 script = ExtResource("1_t23i1")
-Max_Health = null
-Health = null
-Speed = null
-dammage = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1379813897]
 texture_filter = 1

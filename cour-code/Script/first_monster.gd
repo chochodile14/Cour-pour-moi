@@ -4,7 +4,7 @@ var target : Player = null
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 @export var Max_Health: float = 30.0
 @export var Health:float = 30.0
-@export var dammage : int = 5
+@export var dammage : int = 1
 @export var Speed:float = 300.0
 
 enum State {IDLE, CHASE , DEATH , WALK , ATTAKE}
@@ -37,4 +37,4 @@ func take_damage(amount:int):
 func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if body is Player:
 		state = State.ATTAKE
-		(body as Player).
+		(body as Player).take_damage(dammage)

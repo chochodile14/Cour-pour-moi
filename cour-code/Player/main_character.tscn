@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ylkpkser18ce" path="res://Asset/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Archer/Archer_Run.png" id="1_p4h8r"]
 [ext_resource type="Texture2D" uid="uid://cso8vao6moetm" path="res://Asset/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Archer/Archer_Idle.png" id="2_gmqg7"]
 [ext_resource type="Texture2D" uid="uid://dm73lecomdqq2" path="res://Asset/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Archer/Archer_Shoot.png" id="3_gmqg7"]
+[ext_resource type="PackedScene" uid="uid://cgrwca83f46d3" path="res://Player/arrow.tscn" id="5_4mki5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jsdw"]
 atlas = ExtResource("2_gmqg7")
@@ -159,9 +160,6 @@ radius = 231.12181
 [node name="MainCharacter" type="CharacterBody2D" unique_id=429431583]
 scale = Vector2(0.45, 0.45)
 script = ExtResource("1_4ud51")
-Max_Health = null
-Health = null
-dammage = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=689811667]
 texture_filter = 1
@@ -185,3 +183,8 @@ shape = SubResource("CapsuleShape2D_57qmd")
 position = Vector2(135.55556, 73.333336)
 shape = SubResource("CircleShape2D_g4v7s")
 debug_color = Color(0.81147456, 0.31442377, 0.67766225, 0.41960785)
+
+[node name="Arrow" parent="." unique_id=1680977417 instance=ExtResource("5_4mki5")]
+position = Vector2(153.33334, 77.77778)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
