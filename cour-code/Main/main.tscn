@@ -14,18 +14,10 @@ position = Vector2(-451, 231)
 scale = Vector2(0.37, 0.37)
 
 [node name="health" parent="MainCharacter" unique_id=1129045613 instance=ExtResource("4_eunhr")]
-position = Vector2(824.3242, -351.35132)
+position = Vector2(664.86487, -232.43243)
 scale = Vector2(2.7027028, 2.7027028)
 
 [node name="FirstMonster" parent="." unique_id=1530441871 instance=ExtResource("3_eunhr")]
-Max_Health = 30.0
-Health = 30.0
-dammage = 1
-Speed = 300.0
 
 [node name="FirstMonster2" parent="." unique_id=796280672 instance=ExtResource("3_eunhr")]
 position = Vector2(507, -34)
-Max_Health = 30.0
-Health = 30.0
-dammage = 1
-Speed = 300.0

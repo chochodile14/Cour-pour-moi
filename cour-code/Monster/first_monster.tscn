@@ -154,7 +154,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_42buc")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Death",
 "speed": 5.0
 }, {
@@ -225,8 +225,9 @@ script = ExtResource("1_t23i1")
 texture_filter = 1
 position = Vector2(200, 129)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"Attack"
-frame_progress = 0.41028646
+animation = &"Death"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502294310]
 position = Vector2(201, 130)
@@ -240,3 +241,4 @@ shape = SubResource("CircleShape2D_g4v7s")
 debug_color = Color(0.82024306, 0.0017950844, 0.9671652, 0.41960785)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

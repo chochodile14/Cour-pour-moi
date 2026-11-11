@@ -10,6 +10,7 @@ atlas = ExtResource("2_m6voq")
 radius = 37.0
 
 [node name="Arrow" type="Node2D" unique_id=1680977417]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_42itw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=245254051]

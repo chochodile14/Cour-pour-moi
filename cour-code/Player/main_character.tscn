@@ -160,6 +160,7 @@ radius = 231.12181
 [node name="MainCharacter" type="CharacterBody2D" unique_id=429431583]
 scale = Vector2(0.45, 0.45)
 script = ExtResource("1_4ud51")
+arrow_scene = ExtResource("5_4mki5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=689811667]
 texture_filter = 1
@@ -171,7 +172,7 @@ frame_progress = 0.9023541
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=764595084]
 position = Vector2(142, 72)
-zoom = Vector2(2, 2)
+zoom = Vector2(2.4, 2.4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342697114]
 position = Vector2(136, 77)
@@ -183,8 +184,3 @@ shape = SubResource("CapsuleShape2D_57qmd")
 position = Vector2(135.55556, 73.333336)
 shape = SubResource("CircleShape2D_g4v7s")
 debug_color = Color(0.81147456, 0.31442377, 0.67766225, 0.41960785)
-
-[node name="Arrow" parent="." unique_id=1680977417 instance=ExtResource("5_4mki5")]
-position = Vector2(153.33334, 77.77778)
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

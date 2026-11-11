@@ -3,24 +3,19 @@ extends Node2D
 @export var dammage: int = 10
 @export var speed: float = 500.0
 @onready var sprite : Sprite2D = $Sprite2D
+@export var lifetime : float = 3.0
 var direction: Vector2 = Vector2.RIGHT
 var shoot_on = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite.visible = false
+	get_tree().create_timer(lifetime).timeout.connect(queue_free)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if shoot_on == true:
-		return
-	else:
-		sprite.visible = false
-		shoot_on= false
+	pass
 
 func shoot(from: Vector2, to: Vector2):
-	shoot_on = true
-	sprite.visible
 	global_position = from
 	direction = from.direction_to(to)
 	rotation = direction.angle()
